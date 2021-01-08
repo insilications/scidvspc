@@ -22,3 +22,7 @@ xz-dev
 xz-staticdev
 zlib-dev
 zlib-staticdev
+libXScrnSaver-dev
+tk
+tk-dev
+tk-staticdev

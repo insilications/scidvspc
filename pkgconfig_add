@@ -2,4 +2,7 @@
 # not get picked up automatically. One name per line, no whitespace.
 quazip
 tcl
+x11
+xext
+xft
 zlib
