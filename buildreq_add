@@ -1,15 +1,22 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
 buildreq-configure
+critcl
+critcl-dev
+freeglut-dev
 gcc-dev
 glibc-dev
 glibc-staticdev
+glu-dev
 libffi-dev
 libffi-staticdev
 libstdc++
 libstdc++-dev
+libXft
 libxml2-dev
 libxml2-staticdev
+libXScrnSaver-dev
+mesa-dev
 pulseaudio
 pulseaudio-dev
 python3-dev
@@ -17,12 +24,16 @@ python3-staticdev
 stockfish
 tcl
 tcl-dev
+tcllib
+tcllib-dev
 tcl-staticdev
+tk
+tk-dev
+tkimg
+tkimg-dev
+tkimg-staticdev
+tk-staticdev
 xz-dev
 xz-staticdev
 zlib-dev
 zlib-staticdev
-libXScrnSaver-dev
-tk
-tk-dev
-tk-staticdev

@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : scidvspc
 Version  : 3153
-Release  : 2
+Release  : 3
 URL      : file:///insilications/apps/scidvspc-v3153.tar.gz
 Source0  : file:///insilications/apps/scidvspc-v3153.tar.gz
 Summary  : No detailed summary available
@@ -14,16 +14,22 @@ License  : GPL-2.0 LGPL-2.0+
 Requires: scidvspc-bin = %{version}-%{release}
 Requires: scidvspc-data = %{version}-%{release}
 BuildRequires : buildreq-configure
+BuildRequires : critcl
+BuildRequires : critcl-dev
+BuildRequires : freeglut-dev
 BuildRequires : gcc-dev
 BuildRequires : glibc-dev
 BuildRequires : glibc-staticdev
+BuildRequires : glu-dev
 BuildRequires : libXScrnSaver-dev
+BuildRequires : libXft
 BuildRequires : libffi-dev
 BuildRequires : libffi-staticdev
 BuildRequires : libstdc++
 BuildRequires : libstdc++-dev
 BuildRequires : libxml2-dev
 BuildRequires : libxml2-staticdev
+BuildRequires : mesa-dev
 BuildRequires : pkgconfig(quazip)
 BuildRequires : pkgconfig(tcl)
 BuildRequires : pkgconfig(x11)
@@ -38,9 +44,14 @@ BuildRequires : stockfish
 BuildRequires : tcl
 BuildRequires : tcl-dev
 BuildRequires : tcl-staticdev
+BuildRequires : tcllib
+BuildRequires : tcllib-dev
 BuildRequires : tk
 BuildRequires : tk-dev
 BuildRequires : tk-staticdev
+BuildRequires : tkimg
+BuildRequires : tkimg-dev
+BuildRequires : tkimg-staticdev
 BuildRequires : xz-dev
 BuildRequires : xz-staticdev
 BuildRequires : zlib-dev
@@ -84,7 +95,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1610068833
+export SOURCE_DATE_EPOCH=1610089529
 export GCC_IGNORE_WERROR=1
 ## altflags1 content
 export CFLAGS="-O3 -march=native -mtune=native -fgraphite-identity -Wall -Wl,--as-needed -Wl,--build-id=sha1 -Wl,--enable-new-dtags -Wl,--hash-style=gnu -Wl,-O2 -Wl,-z,now -Wl,-z,relro -falign-functions=32 -flimit-function-alignment -fasynchronous-unwind-tables -fdevirtualize-at-ltrans -floop-nest-optimize -fno-math-errno -fno-semantic-interposition -fno-stack-protector -fno-trapping-math -ftree-loop-distribute-patterns -ftree-loop-vectorize -ftree-vectorize -funroll-loops -fuse-ld=bfd -fuse-linker-plugin -malign-data=cacheline -feliminate-unused-debug-types -fipa-pta -flto=16 -fno-plt -mtls-dialect=gnu2 -Wl,-sort-common -Wno-error -Wp,-D_REENTRANT -pipe -ffat-lto-objects -fPIC -fno-exceptions -pthread -static-libstdc++ -static-libgcc"
@@ -127,7 +138,7 @@ ccache -s
 
 
 %install
-export SOURCE_DATE_EPOCH=1610068833
+export SOURCE_DATE_EPOCH=1610089529
 rm -rf %{buildroot}
 %make_install
 
